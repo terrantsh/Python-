@@ -67,10 +67,28 @@ while counter <= n:
 print("sum is %d"%sum)
 '''
 
-
+'''
 count = 0
 while count < 5:
     print(count, "less than 5")
     count += 1
 else:
     print(count, "not less than 5")
+'''
+
+'''
+i= 0
+while i<10:
+    i = i+1
+    print("-"*30)
+    if i == 5:
+        break #continue, pass
+    print(i)
+'''
+
+for i in range(1,10):
+    for j in range(i):
+        j = j+1
+        print("%d*%d=%d" %(i,j,i*j),end="\t")
+    print("\r")
+
