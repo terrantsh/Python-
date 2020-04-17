@@ -80,6 +80,7 @@ for name in movieName:
 
 
 #改：     []
+'''
 namelist = ["小张","小王","小李"]
 print("--------增加前列表的数据----------")
 for name in namelist:
@@ -90,6 +91,72 @@ namelist[1] = "小红"      #修改指定下标的元素内容
 print("--------增加后列表的数据----------")
 for name in namelist:
     print(name)
+'''
+
+#查  ：   [in . not in]
+'''
+findName = input("Name you want：")
+
+if findName in namelist:
+    print("yes")
+else:
+    print("not found")
+'''
+
+
+myList = ["a","b","c","a","b"]
+'''
+print(myList.index("a",1,4))    #可以查找指定下标的元素，并返回找到对应数据的下标位置
+print(myList.index("a",1,3))    #范围区间左闭右开[1,3)
+                                #找不到会报错
+print(myList.count("b"))        #统计某个元素出现几次
+'''
+
+#排序和反转
+'''
+a = [1,4,2,3]
+print(a)
+a.reverse()     #将列表所有元素反转
+print(a)
+a.sort()        #默认排序升序
+print(a)
+a.sort(reverse=True)    #降序
+print(a)
+'''
+
+'''
+#schoolNames = [[],[],[]]        #有三个元素的空列表，每个元素都是一个空列表
+schoolName = [["北京大学","清华大学"],["天津大学","南开大学","南京大学"],["山东大学","中国海洋大学"]]
+print(schoolName[1][2])
+'''
+
+
+import random
+offices = [[],[],[],[]]
+
+TeacherNames = ["A","B","C","D","E","F","G","H","I","J","K"]
+
+for name in TeacherNames:
+    index = random.randint(0,3)
+    offices[index].append(name)
+i = 1
+for office in offices:
+    print("办公室%d的人数为：%d"%(i,len(office)))
+    i += 1
+    for name in office:
+        print("%s"%name,end = "\t")
+    print("")
+    print("--"*10)
+
+
+
+
+
+
+
+
+
+
 
 
 
