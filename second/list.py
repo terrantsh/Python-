@@ -133,84 +133,43 @@ print(schoolName[1][2])
 '''
 import random
 offices = [[],[],[],[]]
-
-TeacherNames = ["A","B","C","D","E","F","G","H","I","J","K"]
-
-for name in TeacherNames:
-    index = random.randint(0,3)
-    offices[index].append(name)
+TeacherNames = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N"]
 i = 1
+for name in TeacherNames:
+    x = random.randint(0,3)
+    offices[x].append(name)
 for office in offices:
-    print("办公室%d的人数为：%d"%(i,len(office)))
-    i += 1
-    for name in office:
-        print("%s"%name,end = "\t")
-    print("")
-    print("--"*10)
+    print("办公室%d的老师有%d个"%(i,len(office)))
+    print("%s"%office)
 '''
 
 products = [["iphone",6888],["MacPro",14800],["小米6",2499],["Coffee",31],["Book",60],["Nike",699]]
-shop_car = []
-shop_cost = 0
-exit_flag = False
-while not exit_flag:
+Shop_Car = []
+Shop_Cost = 0
+Exit_Flag = False
+while not Exit_Flag:
     print("------- 商品列表 -------")
     for index,i in enumerate(products):
         print("%s  %s  %s"%(index,i[0],i[1]))
-    user_choice = input("\n请输入想购买的产品序号（按“q”退出):")
+    user_choice = input("\n输入你想购买的产品的序号（按q退出):")
     if user_choice.isdigit():
         user_choice = int(user_choice)
-        if user_choice >=0 and user_choice < len(products):
-            shop_car.append(products[user_choice])
-            shop_cost += products[user_choice][1]
-            print("\n %s 已经加入到您的购物车中"%products[user_choice])
+        if user_choice >= 0 and user_choice < len(products):
+            Shop_Car.append(products[user_choice])
+            Shop_Cost += products[user_choice][1]
         else:
-            print("抱歉此商品不存在")
+            print("抱歉不存在此商品")
     elif user_choice == "q":
-        if len(shop_car) > 0:
+        if len(Shop_Car) > 0:
             print("\n------- 您的购物车 -------")
-            for index,i in enumerate(shop_car):
+            for index,i in enumerate(Shop_Car):
                 print("%s  %s"%(i[0],i[1]))
-            print("\n您本次花费合计：%s元\n"%shop_cost)
-            exit_flag = True
+            print("\n此次共花费%s元"%Shop_Cost)
+            Exit_Flag = True
         else:
-            exit_flag = True
+            Exit_Flag = True
     else:
-        exit_flag = True
-
-'''
-print("------ 商品列表 ------")
-i = 0
-for product in products:
-    print("%d"%i,end = "\t")
-    print("%s"%(product[0]), end = "\t")
-    print(product[1],end="\t")
-    i += 1
-    print("")
-    
-x = "q"
-while "q" == x:
-    x = input("您需要什么：")
-    if x == "0" or x == "1" or x == "2" or x == "3" or x == "4" or x == "5":
-        print()
-    elif x == "q":
-        x = "q"
-    else:
-        print("请重新输入")
-
-print("----- 购物车 -----")
-k = 1
-'''
-
-
-
-
-
-
-
-
-
-
+        Exit_Flag = True
 
 
 
