@@ -4,6 +4,7 @@
 #@File      : dict.py
 #@Software  : PyCharm
 
+'''
 #字典的定义      键值对
 info = {"name":"吴彦祖", "age":18}
 
@@ -18,3 +19,41 @@ print(info["name"])
 
 print(info.get("age","m"))      #找到的显示原值
 print(info.get("gender","m"))   #没找到的时候可以设置默认值
+'''
+
+
+info = {"name":"吴彦祖", "age":18}
+'''
+#增
+newID = input("请输入新的学号")
+info["id"] = newID
+
+print(info["id"])
+'''
+
+#删
+#[del]  #删除了整个键值对
+# print("删除前:%s"%info["name"])
+# del info["name"]
+# print("删除后:%s"%info["name"])
+
+# print("删除前：%s"%info)
+# del info
+# print("删除后：%s"%info)
+
+#[clear]    #清空
+# print("清空前:%s"%info)
+# info.clear()
+# print("清空后:%s"%info)
+
+#改
+
+#查  #遍历
+#键的查询，值的查询
+
+# info.keys()     #得到所有的键
+# info.values()   #得到所有值
+# info.items()    #得到所有的项，每个键值对是一个元组
+
+#枚举函数
+# enumerate()
